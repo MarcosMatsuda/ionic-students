@@ -1,0 +1,15 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Projeto Ionic</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-list>
+      <ion-searchbar placeholder="Pesquisar"></ion-searchbar>
+  </ion-list>
+  <ion-list *ngFor="let student of students">
+    <ion-item (click)="pageEdit()">{{ student.fullname }}</ion-item>
+  </ion-list>
+</ion-content>
+
