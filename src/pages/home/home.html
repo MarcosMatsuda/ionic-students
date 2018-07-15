@@ -5,11 +5,16 @@
 </ion-header>
 
 <ion-content padding>
-  <ion-list>
-      <ion-searchbar placeholder="Pesquisar"></ion-searchbar>
-  </ion-list>
+  <ion-searchbar [(ngModel)]="searchTerm" [showCancelButton]="shouldShowCancel" (ionInput)="filterList()" (ionCancel)="cancelFilter()" placeholder="Pesquisar"></ion-searchbar>
   <ion-list *ngFor="let student of students">
-    <ion-item (click)="pageEdit()">{{ student.fullname }}</ion-item>
+    <ion-item (click)="pageEdit(student)">
+      <h2>{{ student.fullname }}</h2>
+    </ion-item>
   </ion-list>
-</ion-content>
 
+  <ion-fab bottom right>
+    <button ion-fab (click)="pageCreate()">
+      <ion-icon name="add"></ion-icon>
+    </button>
+  </ion-fab>
+</ion-content>
