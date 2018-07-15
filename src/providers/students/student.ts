@@ -17,8 +17,16 @@ export class StudentProvider {
     console.log('Hello StudentProvider Provider');
   }
 
-  public findAll(): Observable<any>{
+  public findAll(): Observable<any> {
     return this.http.get(this.urlWebservice);
+  }
+
+  public create(student): Observable<any> {
+    return this.http.post(this.urlWebservice, student);
+  }
+
+  public update(id, student): Observable<any> {
+    return this.http.put(`${this.urlWebservice}/${id}`, student);
   }
 
 }
