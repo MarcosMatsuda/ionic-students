@@ -5,15 +5,15 @@
 </ion-header>
 
 <ion-content padding>
-  <ion-list>
+  <form (ngSubmit)="create()" #formulario="ngForm">
     <ion-item>
       <ion-label color="primary" floating>Nome completo</ion-label>
-      <ion-input clearInput></ion-input>
+      <ion-input clearInput [(ngModel)]="fullname" name="fullname"></ion-input>
     </ion-item>
 
     <ion-item>
       <ion-label>Sexo</ion-label>
-      <ion-select [(ngModel)]="gender">
+      <ion-select [(ngModel)]="gender" name="gender">
         <ion-option value="f">Feminino</ion-option>
         <ion-option value="m">Masculino</ion-option>
       </ion-select>
@@ -21,9 +21,10 @@
 
     <ion-item>
       <ion-label>Nascimento</ion-label>
-      <ion-datetime displayFormat="MM/DD/YYYY" [(ngModel)]="myDate"></ion-datetime>
+      <ion-datetime displayFormat="MM/DD/YYYY" [(ngModel)]="myDate" name="date"></ion-datetime>
     </ion-item>
 
-  </ion-list>
+    <button ion-button type="submit" block>Adicionar</button>
+  </form>
 
 </ion-content>
