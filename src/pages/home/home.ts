@@ -64,6 +64,7 @@ export class HomePage {
 
 
     public pageEdit(student: any) {
+
         this.navCtrl.push(EditPage, {
             student: student
         });

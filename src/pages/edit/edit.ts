@@ -28,7 +28,7 @@ export class EditPage {
 
     var studentRequest = {
       name: this.student.fullname,
-      age: this.student.age,
+      birthday: this.student.birthday,
       gender: this.student.gender
     }
 
@@ -40,7 +40,6 @@ export class EditPage {
 
     this.studentProvider.update(this.student.id, studentRequest).subscribe(response => {
       loading.dismiss();
-      console.log(response);
       let alert = this.alertCtrl.create({
         title: 'Sucesso',
         subTitle: 'Estudante editado com sucesso',

@@ -10,6 +10,7 @@ export class CreatePage {
 
   public fullname: string = '';
   public gender: string = '';
+  public birthday:string= '';
 
   constructor(public navCtrl: NavController,
     public navParams: NavParams,
@@ -20,13 +21,13 @@ export class CreatePage {
   }
 
   create() {
+
     var student = {
       id: "8",
       name: this.fullname,
       gender: this.gender,
-      age: "10"
+      birthday: this.birthday
     }
-    console.log(student);
 
     let loading = this.loadingCtrl.create({
       content: 'Adicionando estudante...'
