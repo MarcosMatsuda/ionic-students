@@ -1,3 +1,21 @@
 page-home {
+    .search{
+        height: 75px;
+        background-color: #DCDCDC;
+        margin-bottom: 5px;
+    }
+
+    ion-list.custom ion-item {
+      background: #DCDCDC;
+    }
+
+    ion-list.custom ion-label {
+      background: #DCDCDC;
+      color: #696969;
+      padding:10px;
+    }
+    ion-list.custom{
+      margin-bottom: 5px;
+    }
 
 }

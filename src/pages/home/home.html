@@ -1,13 +1,13 @@
-<ion-header>
+<ion-header text-center class="header">
   <ion-navbar>
-    <ion-title>Projeto Ionic</ion-title>
+    <ion-title class="titulo">Projeto Ionic</ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  <ion-searchbar [(ngModel)]="searchTerm" [showCancelButton]="shouldShowCancel" (ionInput)="filterList()" (ionCancel)="cancelFilter()" placeholder="Pesquisar"></ion-searchbar>
-  <ion-list *ngFor="let student of students">
-    <ion-item (click)="pageEdit(student)">
+  <ion-searchbar class="search" [(ngModel)]="searchTerm" [showCancelButton]="shouldShowCancel" (ionInput)="filterList()" (ionCancel)="cancelFilter()" placeholder="Pesquisar"></ion-searchbar>
+  <ion-list class="custom" *ngFor="let student of students">
+    <ion-item class="item" (click)="pageEdit(student)">
       <h2>{{ student.fullname }}</h2>
     </ion-item>
   </ion-list>
